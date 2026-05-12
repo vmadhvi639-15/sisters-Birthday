@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 14th Birthday Jivika!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #ff4d94;
+            --secondary: #ff85a2;
+            --accent: #ffd700;
+            --bg: #fff0f5;
+            --text: #444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            color: var(--text);
+            text-align: center;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- Header Section --- */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(255, 77, 148, 0.2), rgba(255, 77, 148, 0.2)) ,center/cover; /* Using one of her photos as background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5.5rem;
+            animation: fadeInDown 1.5s ease-out;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* --- Birthday Note --- */
+        .wishes-section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: -50px auto 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(255, 77, 148, 0.2);
+            border-top: 8px solid var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* --- Image Gallery --- */
+        .gallery-title {
+            margin: 50px 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--primary);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 0 40px 80px;
+        }
+
+        .gallery-item {
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.4s ease;
+            border: 5px solid white;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            border-color: var(--primary);
+            z-index: 5;
+        }
+
+        /* --- Floating Balloons --- */
+        .balloon {
+            position: fixed;
+            bottom: -100px;
+            width: 40px;
+            height: 55px;
+            border-radius: 50%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .balloon::after {
+            content: "🎈";
+            font-size: 30px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 3.5rem; }
+            .card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Happy 14th Birthday</h1>
+        <div class="subtitle">Jivika ✨</div>
+    </header>
+
+    <section class="wishes-section">
+        <div class="card">
+            <h3>Our Dearest Pari...</h3>
+            <p>Happy 14th Birthday to the most amazing little sister! 🎂</p>
+            <p>Today is a very special day because 14 years ago, you came into our lives and made everything more colorful. You are growing into such a kind, talented, and beautiful person (inside and out!).</p>
+            <p>May this year bring you endless happiness, success in your studies, and all the chocolates you can eat! Keep shining like the star you are. 🌟</p>
+            <p style="font-weight: 600; color: var(--primary);">With all our love, always!</p>
+        </div>
+    </section>
+
+    <h2 class="gallery-title">Memories of Jivika</h2>
+    <div class="gallery">
+        <div class="gallery-item"><img src="pp11.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="ppp.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="pp.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="p9.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="p8.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="p7.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="p4.jpeg" alt="Jivika"></div>
+        <div class="gallery-item"><img src="p5.jpeg" alt="Jivika"></div>
+    </div>
+
+    <footer>
+        <p>Created for Jivika's 14th Birthday Celebration 🎉</p>
+    </footer>
+
+    <script>
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = Math.random() * 100 + "vw";
+            balloon.style.animation = `float ${Math.random() * 4 + 4}s linear forwards`;
+            document.body.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.remove();
+            }, 6000);
+        }
+
+        // Create a new balloon every 600ms
+        setInterval(createBalloon, 600);
+    </script>
+</body>
+</html>
